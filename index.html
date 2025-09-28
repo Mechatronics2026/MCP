@@ -1,104 +1,161 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Model Context Protocol (MCP)</title>
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
 <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
 <style>
-    body {
-      font-family: 'Cairo', sans-serif;
-      background-color: #f8f9fa;
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      width: 100%;
-      overflow-y: auto;
-    }
-    .slide-container {
-      width: 1280px;
-      min-height: 720px;
-      position: relative;
-      background-color: #ffffff;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    .title-section {
-      padding-top: 120px;
-    }
-    .accent-bar {
-      background-color: #0c4da2;
-      height: 12px;
-      width: 120px;
-      margin: 0 auto 30px auto;
-    }
-    .university-logo {
-      position: absolute;
-      top: 40px;
-      left: 40px;
-      width: 160px;
-      height: auto;
-    }
-    .network-bg {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 500px;
-      height: 500px;
-      opacity: 0.1;
-      z-index: 0;
-    }
-    .content-wrapper {
-      position: relative;
-      z-index: 10;
-    }
-    .footer-bar {
-      background-color: #0c4da2;
-      height: 12px;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-    }
-  </style>
+  body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    overflow-y: auto;
+  }
+  .slide-container {
+    width: 1280px;
+    min-height: 720px;
+    position: relative; /* مهم عشان نثبت الزر داخلها فقط */
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 32px auto;
+  }
+  .title-section {
+    padding-top: 120px;
+  }
+  .accent-bar {
+    background-color: #0c4da2;
+    height: 12px;
+    width: 120px;
+    margin: 0 auto 30px auto;
+  }
+  .university-logo {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 160px;
+    height: auto;
+  }
+  .network-bg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 500px;
+    height: 500px;
+    opacity: 0.1;
+    z-index: 0;
+  }
+  .content-wrapper {
+    position: relative;
+    z-index: 10;
+    padding: 0 64px 48px 64px;
+  }
+  .footer-bar {
+    background-color: #0c4da2;
+    height: 12px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  /* ====== Download button styles ====== */
+  .download-btn {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    z-index: 9999;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 14px;
+    background: #0c4da2;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 8px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.14);
+    transition: transform .12s ease, opacity .12s ease;
+    font-size: 14px;
+  }
+  .download-btn:hover {
+    transform: translateY(-3px);
+    opacity: 0.95;
+  }
+  .download-btn i { font-size: 16px; }
+  /* تأكد إن التاريخ يظهر فوق الفوتر */
+  .slide-date {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    z-index: 20;
+    color: #6b7280; /* gray-500 */
+    font-size: 13px;
+  }
+
+  /* تجاوب خفيف لو فتحت على شاشة أصغر */
+  @media (max-width: 1366px) {
+    .slide-container { width: 100%; margin: 20px; }
+  }
+</style>
 </head>
 <body>
-<div class="slide-container mx-auto">
-<!-- Network background illustration -->
-<img alt="Model Context Protocol Architecture" class="network-bg" 
-     src="https://encore.dev/assets/blog/mcp.png"/>
-<!-- University Logo Placeholder -->
-<div class="university-logo bg-gray-100 flex items-center justify-center">
-<i class="fas fa-university text-5xl text-gray-500"></i>
-</div>
-<div class="content-wrapper px-16">
-<div class="title-section text-center">
-<div class="accent-bar"></div>
-<h1 class="text-4xl font-bold text-gray-800 mb-4">Model Context Protocol (MCP)</h1>
-<h2 class="text-3xl font-bold text-gray-700 mb-12">Revolutionizing Data Communication and System Interoperability</h2>
-<div class="author-info mt-16 mb-8">
-<p class="text-xl mb-2">Prepared by:</p>
-<p class="text-2xl font-semibold text-gray-700">Abdulnasser Jamal AL-Sanabani</p>
-</div>
-<div class="supervisor-info mb-8">
-<p class="text-xl mb-2">Supervised by:</p>
-<p class="text-2xl font-semibold text-gray-700">Prof. Khaled Taher Al-Hussaini</p>
-</div>
-<div class="university-info mt-16">
-<p class="text-lg text-gray-600">Department of Mechatronics Engineering</p>
-<p class="text-lg font-semibold text-gray-700">
-University of Thamar</p>
-<p class="text-lg text-gray-600">Academic Year 2025-2026</p>
-</div>
-</div>
-</div>
-<div class="footer-bar"></div>
-<!-- Date -->
-<div class="absolute bottom-8 left-8 text-gray-500 text-sm">
-<p>September 27, 2025</p>
-</div>
-</div>
+  <div class="slide-container mx-auto">
+    <!-- Network background illustration -->
+    <img alt="Model Context Protocol Architecture" class="network-bg" 
+         src="https://encore.dev/assets/blog/mcp.png"/>
+
+    <!-- University Logo Placeholder -->
+    <div class="university-logo bg-gray-100 flex items-center justify-center">
+      <i class="fas fa-university text-5xl text-gray-500"></i>
+    </div>
+
+    <!-- ====== Download button (only inside this first slide) ====== -->
+    <!-- استخدمت هنا الرابط الكامل لملف الـPDF على GitHub Pages -->
+
+    <a id="downloadPdfBtn"
+       class="download-btn"
+       href="https://mechatronics2026.github.io/MCP/MCP.pdf"
+       download
+       target="_blank"
+       aria-label="Download PDF">
+      <i class="fas fa-download" aria-hidden="true"></i>
+      Download PDF
+    </a>
+
+    <div class="content-wrapper px-16">
+      <div class="title-section text-center">
+        <div class="accent-bar"></div>
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">Model Context Protocol (MCP)</h1>
+        <h2 class="text-3xl font-bold text-gray-700 mb-12">Revolutionizing Data Communication and System Interoperability</h2>
+        <div class="author-info mt-16 mb-8">
+          <p class="text-xl mb-2">Prepared by:</p>
+          <p class="text-2xl font-semibold text-gray-700">Abdulnasser Jamal AL-Sanabani</p>
+        </div>
+        <div class="supervisor-info mb-8">
+          <p class="text-xl mb-2">Supervised by:</p>
+          <p class="text-2xl font-semibold text-gray-700">Prof. Khaled Taher Al-Hussaini</p>
+        </div>
+        <div class="university-info mt-16">
+          <p class="text-lg text-gray-600">Department of Mechatronics Engineering</p>
+          <p class="text-lg font-semibold text-gray-700">University of Thamar</p>
+          <p class="text-lg text-gray-600">Academic Year 2025-2026</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar"></div>
+
+    <!-- Date -->
+    <div class="slide-date">
+      <p>September 27, 2025</p>
+    </div>
+
+  </div>
 </body>
 </html>
 
