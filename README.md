@@ -1,8 +1,7 @@
 # MCP 🚀
-
 ![GitHub stars](https://img.shields.io/github/stars/Mechatronics2026/MCP?style=social) ![Docs](https://img.shields.io/badge/site-mechatronics2026.github.io%2FMCP-blue) ![License](https://img.shields.io/badge/license-SET%20ME%20UP-lightgrey)
 
-**A concise hub for learning and exploring the Model Context Protocol (MCP) — curated examples, servers, and walkthroughs for students, researchers, and engineers.**
+**A concise hub for learning and exploring the Model Context Protocol (MCP) — curated examples, servers, and walkthroughs for students, researchers, and engineers, (Arduino / ROS / Vision / Home Assistant).**
 
 
 
@@ -28,7 +27,7 @@ This repo acts as a start index: the landing page (`index`) shows the concept an
 
 ## 📚 Core reference & official servers
 - **Model Context Protocol — reference servers**  
-  `https://github.com/modelcontextprotocol/servers`  
+  https://github.com/modelcontextprotocol/servers  
   Primary collection of MCP server implementations and canonical examples. If you want official/reference server code, start here.
 
 
@@ -37,31 +36,31 @@ This repo acts as a start index: the landing page (`index`) shows the concept an
 These repositories are practical examples you can clone and inspect to see MCP used in real systems:
 
 - 🔌 **Home Assistant integration**  
-  `https://github.com/tevonsb/homeassistant-mcp`  
+  https://github.com/tevonsb/homeassistant-mcp  
   Example that connects MCP endpoints with Home Assistant automations and event flows.
 
 - 🧮 **MATLAB tools**  
-  `https://github.com/neuromechanist/matlab-mcp-tools`  
+  https://github.com/neuromechanist/matlab-mcp-tools  
   Tools to send/receive MCP messages from MATLAB workflows — useful for data analysis and control prototyping.
 
 - 🖥️ **OpenCV / Vision pipeline**  
-  `https://github.com/GongRzhe/opencv-mcp-server`  
+  https://github.com/GongRzhe/opencv-mcp-server  
   Exposes computer-vision processing via MCP (object detection, tracking outputs over MCP).
 
 - 🤝 **ROS MCP server**  
-  `https://github.com/robotmcp/ros-mcp-server`  
+  https://github.com/robotmcp/ros-mcp-server  
   Bridge between ROS topics/services and MCP for laboratory robotics and research stacks.
 
 - 🏭 **Universal Robots adapter**  
-  `https://github.com/nonead/Nonead-Universal-Robots-MCP`  
+  https://github.com/nonead/Nonead-Universal-Robots-MCP  
   Shows how to adapt MCP to industrial robot controllers (UR series) for orchestration demos.
 
 - 🔋 **Arduino minimal MCP server**  
-  `https://github.com/amahpour/arduino-mcp-server-simple`  
+  https://github.com/amahpour/arduino-mcp-server-simple  
   Small-footprint example to turn a microcontroller into an MCP endpoint for classroom experiments.
   
 - 🔎 **More:**  
-  `https://www.linkedin.com/pulse/guide-model-context-protocol-mcp-unlocking-ais-rick-hightower-mwq1c`  
+  https://www.linkedin.com/pulse/guide-model-context-protocol-mcp-unlocking-ais-rick-hightower-mwq1c  
   By the end of this article in less than 1 hour, you will have created three versions of a ChatBot and a custom MCP Server.
 
 
@@ -84,7 +83,4 @@ Watch these to see MCP in action.
 ## 🤝 Contribute & stay updated
 This repo is a living resource. New materials, example servers, and an extended research write-up or application notes will be added here over time. If you want to follow updates, check this repository periodically or open an issue for questions and PRs.
 
-
-
-### ✨ Suggested short repository description (for the small GitHub description field)
-`MCP — Lightweight hub with demos, servers and walkthroughs to learn and integrate the Model Context Protocol (Arduino / ROS / Vision / Home Assistant).`
+---
