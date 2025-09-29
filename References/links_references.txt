@@ -9,3 +9,7 @@ https://arxiv.org/abs/2504.12757
 http://fastread.io/books/mastering-mcp-building-connected-ai-agents-and-workflows-c49ce0aa/landing
 
 https://medium.com/@lakshan_fernando/mastering-mcp-the-model-context-protocol-behind-smarter-ai-agents-i-33078156e38d
+
+https://www.linkedin.com/pulse/guide-model-context-protocol-mcp-unlocking-ais-rick-hightower-mwq1c
+
+https://modelcontextprotocol.io/docs/getting-started/intro
